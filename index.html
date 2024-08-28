@@ -1,13 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nome Aleatório</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #nome {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <h1>floricultura</h1>
-    <img src="flores.jpg" width="600" height="400" alt="imagem não está com nome correto ou não foi enviada para o repositório">
-    <a href="https://www.google.com.br">Clique Aqui</a>
+    <h1>Gerador de Nome Aleatório</h1>
+    <button onclick="gerarNome()">Gerar Nome</button>
+    <div id="nome"></div>
+
+    <script>
+        function gerarNome() {
+            const nomes = ["Alex", "Aniele", "Carol", "Daniel", "Evandro", "Cachorro", "Gato", "Peixe", "Vinicios", "Alexandre"];
+            const nomeAleatorio = nomes[Math.floor(Math.random() * nomes.length)];
+            document.getElementById("nome").textContent = nomeAleatorio;
+        }
+    </script>
 </body>
 </html>
